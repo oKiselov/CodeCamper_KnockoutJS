@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Site.css" />
+    <Content Include="default.html" />
     <Content Include="Images\banner.jpg" />
     <Content Include="Images\body.jpg" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -78,6 +79,8 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\knockout-3.4.2.debug.js" />
     <Content Include="Scripts\knockout-3.4.2.js" />
+    <Content Include="Scripts\Models\Media.js" />
+    <Content Include="Scripts\ViewModels\DefaultViewModel.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
