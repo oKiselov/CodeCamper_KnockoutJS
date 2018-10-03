@@ -80,6 +80,7 @@
     <Content Include="Scripts\knockout-3.4.2.debug.js" />
     <Content Include="Scripts\knockout-3.4.2.js" />
     <Content Include="Scripts\Models\Media.js" />
+    <Content Include="Scripts\ViewModels\DataBindingViewModel.js" />
     <Content Include="Scripts\ViewModels\DefaultViewModel.js" />
     <Content Include="Web.config" />
   </ItemGroup>
