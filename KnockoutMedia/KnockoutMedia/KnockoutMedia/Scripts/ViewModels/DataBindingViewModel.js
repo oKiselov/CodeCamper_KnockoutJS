@@ -1,5 +1,5 @@
 ﻿var app = window.app || {};
-app.DefaultViewModel = (function (ko) {
+app.DataBindingViewModel = (function (ko) {
     'use strict';
     var me = {
         message: ko.observable(''),
@@ -14,7 +14,7 @@ app.DefaultViewModel = (function (ko) {
     }
 
     function loadMessage() {
-        me.message("My favourite is: " + me.colors[Math.floor(Math.random() * mew.colors.length)].toLowerCase());
+        me.message("My favourite is: " + me.colors[Math.floor(Math.random() * me.colors.length)].toLowerCase());
     }
 
     _init();

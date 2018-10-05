@@ -68,9 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Site.css" />
+    <Content Include="data-binding.html" />
     <Content Include="default.html" />
     <Content Include="Images\banner.jpg" />
     <Content Include="Images\body.jpg" />
+    <Content Include="Data\Borrowers.json" />
+    <Content Include="Data\MediaTypes.json" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\DataContext.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
