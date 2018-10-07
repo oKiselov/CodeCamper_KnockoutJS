@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="borrowers.html" />
+    <Content Include="composition.html" />
     <Content Include="Content\Site.css" />
     <Content Include="data-binding.html" />
     <Content Include="default.html" />
@@ -78,6 +79,8 @@
     <Content Include="Images\body.jpg" />
     <Content Include="Data\Borrowers.json" />
     <Content Include="Data\MediaTypes.json" />
+    <Content Include="Scripts\Models\Borrower.js" />
+    <Content Include="Scripts\ViewModels\CompositionViewModel.js" />
     <Content Include="Scripts\ViewModels\TemplateViewModel.js" />
     <Content Include="Scripts\ViewModels\WithViewModel.js" />
     <Content Include="Templates\media-table.html" />

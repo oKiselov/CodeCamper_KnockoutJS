@@ -5,3 +5,7 @@ app.Media = function (isbn, mediaType, name) {
     this.MediaType = ko.observable(mediaType);
     this.Name = ko.observable(name);
 };
+
+app.Media.prototype.toString = function () {
+    return this.Name() + " (" + this.MediaType() + ") [" + this.ISBN() + "]";
+};
