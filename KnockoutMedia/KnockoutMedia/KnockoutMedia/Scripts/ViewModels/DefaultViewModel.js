@@ -1,12 +1,11 @@
 ﻿var app = window.app || {};
 app.DefaultViewModel = (function (ko, db) {
-    'use strict'; 
+    'use strict';
     var me = {
-        catalog: ko.observableArray([]),
-        init: init
+        catalog: ko.observableArray([])
     };
 
-    function init() {
+    function _init() {
         db.getCatalog(function (data) {
             var a = [];
             ko.utils.arrayForEach(data || [], function (item) {
@@ -16,5 +15,6 @@ app.DefaultViewModel = (function (ko, db) {
         });
     }
 
+    _init();
     return me;
 }(ko, app.DataContext));

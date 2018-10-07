@@ -7,7 +7,7 @@ app.DataContext = (function ($) {
         getBorrowers: getBorrowers,
         getCatalog: getCatalog,
         getGuid: getGuid,
-        getMediaType: getMediaType,
+        getMediaTypes: getMediaTypes,
         saveBorrower: saveBorrower,
         saveMedia: saveMedia
     };
@@ -28,7 +28,7 @@ app.DataContext = (function ($) {
                     }
                 }
                 if (exists) {
-                    data.slice(i, 1);
+                    data.splice(i, 1);
                 }
             }
             localStorage["borrowers"] = JSON.stringify(data);
@@ -58,13 +58,27 @@ app.DataContext = (function ($) {
         }
     }
 
+    function getBorrowers(callback) {
+        var borrowers = null;
+        if ($.isFunction(callback)) {
+            borrowers = localStorage["borrowers"];
+            if (borrowers) {
+                callback(JSON.parse(borrowers));
+            } else {
+                $.getJSON('/Data/Borrowers.json', function (data) {
+                    localStorage["borrowers"] = JSON.stringify(data.Borrowers);
+                    callback(data.Borrowers);
+                });
+            }
+        }
+    }
+
     function getCatalog(callback) {
         if (typeof callback === 'function') {
             var catalog = localStorage["catalog"];
             if (catalog) {
                 callback(JSON.parse(catalog));
-            }
-            else {
+            } else {
                 $.getJSON('/Data/Catalog.json', function (data) {
                     localStorage["catalog"] = JSON.stringify(data.Catalog);
                     callback(data.Catalog);
