@@ -3,6 +3,7 @@ app.BorrowerViewModel = (function (ko, db) {
     'use strict';
     var me = {
         borrowers: ko.observableArray([]),
+        sortedBorrowers: undefined,
         //
         save: save
     };
@@ -15,6 +16,11 @@ app.BorrowerViewModel = (function (ko, db) {
             });
             me.borrowers(a);
         });
+        me.sortedBorrowers = ko.pureComputed(function () {
+            return this.borrowers().sort(function (l, r) {
+                return (l.Name() === r.Name() ? 0 : l.Name() > r.Name() ? 1 : -1) || (l.Email() === r.Email() ? 0 : l.Email() > r.Email() ? 1 : -1);
+            });
+        }, me);
     }
 
     function save() {

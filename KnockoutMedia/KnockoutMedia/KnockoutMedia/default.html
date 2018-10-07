@@ -20,19 +20,41 @@
                         <th>Name</th>
                     </tr>
                 </thead>
-                <tbody data-bind="foreach: catalog">
+                <tbody data-bind="foreach: possessed">
                     <tr>
                         <td data-bind="text: MediaType"></td>
                         <td data-bind="text: Name, attr: { title: ISBN }"></td>
                     </tr>
                 </tbody>
             </table>
+            <!-- ko if: borrowed().length > 0 -->
+            <h1>Borrowed</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Media Type</th>
+                        <th>Name</th>
+                        <th>Borrowed By</th>
+                        <th>Due Date</th>
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach: borrowed">
+                    <tr data-bind="css: {overdue: new Date(DueDate()) < new Date()}">
+                        <td data-bind="text: MediaType"></td>
+                        <td data-bind="text: Name, attr: {title: ISBN}"></td>
+                        <td data-bind="text: Borrower"></td>
+                        <td data-bind="text: DueDate"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- /ko -->
         </div>
     </div>
     <script src="Scripts/jquery-3.3.1.min.js"></script>
     <script src="Scripts/knockout-3.4.2.js"></script>
     <script src="Scripts/DataContext.js"></script>
     <script src="Scripts/Models/Media.js"></script>
+    <script src="Scripts/Models/Borrower.js"></script>
     <script src="Scripts/ViewModels/DefaultViewModel.js"></script>
     <script>
         $(document).ready(function () {

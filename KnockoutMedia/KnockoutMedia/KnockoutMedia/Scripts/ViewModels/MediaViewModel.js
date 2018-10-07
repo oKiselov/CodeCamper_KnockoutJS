@@ -11,7 +11,7 @@ app.MediaViewModel = (function (ko, db) {
         db.getCatalog(function (data) {
             var a = [];
             ko.utils.arrayForEach(data || [], function (item) {
-                a.push(new app.Media(item.ISBN, item.MediaType, item.Name));
+                a.push(new app.Media(item.ISBN, item.MediaType, item.Name, item.Borrower, item.DueDate));
             });
             me.catalog(a);
         });
