@@ -71,12 +71,17 @@
     <Content Include="Content\Site.css" />
     <Content Include="data-binding.html" />
     <Content Include="default.html" />
+    <Content Include="external-template-books.html" />
+    <Content Include="external-template-magazines.html" />
     <Content Include="foreach.html" />
     <Content Include="Images\banner.jpg" />
     <Content Include="Images\body.jpg" />
     <Content Include="Data\Borrowers.json" />
     <Content Include="Data\MediaTypes.json" />
+    <Content Include="Scripts\ViewModels\TemplateViewModel.js" />
     <Content Include="Scripts\ViewModels\WithViewModel.js" />
+    <Content Include="Templates\media-table.html" />
+    <Content Include="template.html" />
     <Content Include="with.html" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="media.html" />
