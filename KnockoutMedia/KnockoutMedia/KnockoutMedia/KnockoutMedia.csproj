@@ -81,8 +81,10 @@
     <Content Include="Data\MediaTypes.json" />
     <Content Include="Scripts\Models\Borrower.js" />
     <Content Include="Scripts\ViewModels\CompositionViewModel.js" />
+    <Content Include="Scripts\ViewModels\SubscribeViewModel.js" />
     <Content Include="Scripts\ViewModels\TemplateViewModel.js" />
     <Content Include="Scripts\ViewModels\WithViewModel.js" />
+    <Content Include="subscribe.html" />
     <Content Include="Templates\media-table.html" />
     <Content Include="template.html" />
     <Content Include="with.html" />
